@@ -13,3 +13,10 @@ Download any of these boiler plate vue js
 ` npm install `
 
 ` npm run dev `
+
+
+## Additional resources
+
+`--save` places the `vue-router` in production in package.json
+
+`npm install --save vue-router`
