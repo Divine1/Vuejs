@@ -20,3 +20,6 @@ Download any of these boiler plate vue js
 `--save` places the `vue-router` in production in package.json
 
 `npm install --save vue-router`
+
+
+`npm install vue-resource`
