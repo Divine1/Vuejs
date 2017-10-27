@@ -45,6 +45,7 @@
             <v-list-tile-title >{{ workshop.title }}</v-list-tile-title>
           </v-list-tile>
         </v-list>
+
       </v-menu>
 
 <v-menu open-on-hover offset-y>
@@ -56,6 +57,9 @@
           </v-list-tile>
         </v-list>
       </v-menu>
+      
+        <v-btn flat >CAREERS</v-btn>
+      <v-btn flat >ABOUTUS</v-btn>
 </span>
     </v-toolbar>
 <v-layout wrap>
@@ -167,6 +171,21 @@
           </v-list-group> 
 
 
+<v-list-tile @click="small_list()">
+          
+          <v-list-tile-content>
+            <v-list-tile-title>CAREER</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        
+        <v-list-tile   @click="small_list()">
+       
+          <v-list-tile-content>
+            <v-list-tile-title>ABOUTUS</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>  
+
+
         </v-list>
 
 
@@ -220,7 +239,7 @@ export default {
       { title: "Home", icon: "dashboard" },
       { title: "About", icon: "question_answer" }
     ],
-    logomouseactive : false
+    logomouseactive: false
   }),
   methods: {
     mylist(i, event) {
@@ -241,22 +260,22 @@ export default {
 
       this.windowSize = { x: window.innerWidth, y: window.innerHeight };
       console.log(this.windowSize.x);
-      if (this.windowSize.x <= 903) {
+      if (this.windowSize.x <= 1093) {
         this.toolbar_isSmallscreen = true;
       } else {
         this.toolbar_isSmallscreen = false;
-        this.drawer=false;
+        this.drawer = false;
       }
       console.log("screen: " + this.toolbar_isSmallscreen);
     },
     small_list() {},
-    logomouseover(){
-        console.log("over");
-        this.logomouseactive = true;
+    logomouseover() {
+      console.log("over");
+      this.logomouseactive = true;
     },
-    logomouseleave(){
-        console.log("leave");
-        this.logomouseactive = false;
+    logomouseleave() {
+      console.log("leave");
+      this.logomouseactive = false;
     }
   }
 };
@@ -266,8 +285,8 @@ export default {
   display: none;
 }
 .iiclublogo {
-   background: url("/public/logoii.png");
+  background: url("/public/logoii.png");
   background-repeat: no-repeat;
-  background-size: 30px 30px; 
+  background-size: 30px 30px;
 }
 </style>
