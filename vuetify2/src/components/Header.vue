@@ -1,6 +1,6 @@
 <template>
   <div>
-   <v-toolbar dark color="green" v-resize="onResize">
+   <v-toolbar dark color="pink" v-resize="onResize">
       <v-toolbar-side-icon :class="{hidetoolbar : !toolbar_isSmallscreen}"
       @click.stop="drawer = !drawer" dark 
       ></v-toolbar-side-icon>

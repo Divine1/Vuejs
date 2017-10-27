@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Carousal from './body/Carousal.vue';
-import Flashitems from './body/Flashitems.vue';
+import Carousal from './homepage/Carousal.vue';
+import Flashitems from './homepage/Flashitems.vue';
 
 export default {
   components : {
