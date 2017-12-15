@@ -41,13 +41,7 @@ body{
 #mainapp{
   background-color: green;
 }
-#header{
-  background-color: yellow;
-}
-.header{
-  display: flex;
-  height: 10%;
-}
+
 #body{
   background-color: violet;
 }
