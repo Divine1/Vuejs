@@ -1,131 +1,110 @@
 export const coursejson = [
-    { "id": "courses_1", "title": "Automation" ,
+    { "sub_id": "courses_1", "topic": "Automation" ,
         "categories" : [
             {
-                "id": "courses_1_1", 
-                "topic": "Industrial Automation",
-                "shortdescription": "Programmable Logic Controller generally known as a PLC is the most used guiding force behind an automated industrial plant. PLCs along with certain other necessary ingredients like sensors, motors, actuators, valves, conveyors, boilers, scada systems, computers & many more, makes a real automated manufacturing plant. It is an electronic device used in many industries to monitor and control building systems and production process."
+                "sub_id": "courses_1_1", 
+                "topic": "Industrial Automation"
             },
             {
-                "id": "courses_1_2", 
-                "topic": "Home Automation",
-                "shortdescription": "Automation is, unsurprisingly, one of the two main characteristics of home automation. Automation refers to the ability to program and schedule events for the devices on the network. The programming may include time-related commands, such as having your lights turn on or off at specific times each day."
+                "sub_id": "courses_1_2", 
+                "topic": "Home Automation"
             },
         ]
     },
-    { "id": "courses_2", "title": "Robotics",
+    { "sub_id": "courses_2", "topic": "Robotics",
         "categories" : [
             {
-                "id": "course_2_1",
-                "topic": "Basic",
-                "shortdescription": ""
+                "sub_id": "course_2_1",
+                "topic": "Basic"
             },
             {
-                "id": "course_2_2",
-                "topic": "Advanced",
-                "shortdescription": ""
+                "sub_id": "course_2_2",
+                "topic": "Advanced"
             },
             {
-                "id": "course_2_3",
-                "topic": "Manual",
-                "shortdescription": ""
+                "sub_id": "course_2_3",
+                "topic": "Manual"
             },
         ]
     },
-    { "id": "courses_3", "title": "Electronics",
+    { "sub_id": "courses_3", "topic": "Electronics",
         "categories" : [
             {
-                "id": "course_3_1",
-                "topic": "Embedded PCB design",
-                "shortdescription": ""
+                "sub_id": "course_3_1",
+                "topic": "Embedded PCB design"
             },
             {
-                "id": "course_3_2",
-                "topic": "Arduino",
-                "shortdescription": ""
+                "sub_id": "course_3_2",
+                "topic": "Arduino"
             },
             {
-                "id": "course_3_3",
-                "topic": "Raspberry pi",
-                "shortdescription": ""
+                "sub_id": "course_3_3",
+                "topic": "Raspberry pi"
             },
             {
-                "id": "course_3_4",
-                "topic": "School electronics fun project",
-                "shortdescription": ""
+                "sub_id": "course_3_4",
+                "topic": "School electronics fun project"
             },
             {
-                "id": "course_3_5",
-                "topic": "AVR",
-                "shortdescription": ""
+                "sub_id": "course_3_5",
+                "topic": "AVR"
             }
         ] 
     },
-    { "id": "courses_4", "title": "IOT" },
-    { "id": "courses_5", "title": "IT Courses",
+    { "sub_id": "courses_4", "topic": "IOT" },
+    { "sub_id": "courses_5", "topic": "IT Courses",
         "categories" : [
             {
-                "id": "course_5_1",
-                "topic": "Android App Creation",
-                "shortdescription": ""
+                "sub_id": "course_5_1",
+                "topic": "Android App Creation"
             },
             {
-                "id": "course_5_2",
-                "topic": "Ethical Hacking",
-                "shortdescription": ""
+                "sub_id": "course_5_2",
+                "topic": "Ethical Hacking"
             },
             {
-                "id": "course_5_3",
-                "topic": "Python",
-                "shortdescription": ""
+                "sub_id": "course_5_3",
+                "topic": "Python"
             },
             {
-                "id": "course_5_4",
-                "topic": "Big data",
-                "shortdescription": ""
+                "sub_id": "course_5_4",
+                "topic": "Big data"
             },
             {
-                "id": "course_5_5",
-                "topic": "Web Designing",
-                "shortdescription": ""
+                "sub_id": "course_5_5",
+                "topic": "Web Designing"
             }
         ]
     },
-    { "id": "courses_6", "title": "AeroModeling",
+    { "sub_id": "courses_6", "topic": "AeroModeling",
         "categories" : [
             {
-                "id": "course_6_1",
-                "topic": "Quadcopter",
-                "shortdescription": ""
+                "sub_id": "course_6_1",
+                "topic": "Quadcopter"
             },
             {
-                "id": "course_6_2",
-                "topic": "RC Planes",
-                "shortdescription": ""
+                "sub_id": "course_6_2",
+                "topic": "RC Planes"
             },
             {
-                "id": "course_6_3",
-                "topic": "Hovercrafts",
-                "shortdescription": ""
+                "sub_id": "course_6_3",
+                "topic": "Hovercrafts"
             }
         ]
     },
-    { "id": "courses_7", "title": "Design and Simulation",
+    { "sub_id": "courses_7", "topic": "Design and Simulation",
     "categories" : [
         {
-            "id": "course_7_1",
-            "topic": "Matlab",
-            "shortdescription": ""
+            "sub_id": "course_7_1",
+            "topic": "Matlab"
         },
         {
-            "id": "course_7_2",
-            "topic": "NI Lab",
-            "shortdescription": ""
+            "sub_id": "course_7_2",
+            "topic": "NI Lab"
         },
         {
-            "id": "course_7_3",
-            "topic": "Autocad",
-            "shortdescription": ""
+            "sub_id": "course_7_3",
+            "topic": "Autocad"
         }
     ]
     
