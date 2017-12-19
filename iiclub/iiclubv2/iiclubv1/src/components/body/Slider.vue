@@ -60,7 +60,7 @@ export default {
 <style>
 #body-slider{
      max-height: 768px; 
-    height: 400px;
+    /* height: 400px; */
     width: auto;
 }
 </style>
