@@ -5,12 +5,12 @@
       <div class="sidebarcontent">
         <ul>
             <li v-for="(navbarContent,index) in navbarContents" :key="index" @click.stop.prevent="firstLevelLiClick">
-                <a v-if="navbarContent.subTopic.length == 0" @click="triggerContent">{{navbarContent.topic}}</a>
-                <a v-else>{{navbarContent.topic}}</a>
+                <a v-if="navbarContent.subTopic.length == 0" @click="triggerContent" >{{navbarContent.topic}}</a>
+                <a class="after" v-else>{{navbarContent.topic}}</a>
                 <ul class="hideSecondLevelUl">
                     <li v-for="(subTopic,index1) in navbarContent.subTopic" :key="index1" @click.stop.prevent="secondLevelLiClick">
-                        <a v-if="subTopic.subTopic.length == 0" @click="triggerContent">{{subTopic.topic}}</a>
-                        <a v-else>{{subTopic.topic}}</a>
+                        <a v-if="subTopic.subTopic.length == 0" @click="triggerContent" >{{subTopic.topic}}</a>
+                        <a class="after" v-else>{{subTopic.topic}}</a>
                         <ul class="hideThirdLevelUl">
                           <li v-for="(subTopic1,index2) in subTopic.subTopic" :key="index2">
                             <a @click="triggerContent">{{subTopic1.topic}}</a>
@@ -130,6 +130,12 @@ export default {
 }
 
 /* show/hide end*/
+
+.sidebarcontent .after:after{
+  content: "\25B0";
+  color: blue;
+}
+/* https://unicode-table.com/en/search/?q=down%20triangle */
 .sidebarcontent ul{
   list-style-type: none;
 }
