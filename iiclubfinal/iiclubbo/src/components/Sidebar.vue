@@ -112,7 +112,7 @@ export default {
   position: absolute;
   background-color: bisque;
   min-height: 126px;
-  min-width: 200px;
+  min-width: 240px;
 }
 /* show/hide start*/
 
@@ -145,4 +145,12 @@ export default {
 .sidebarcontent > ul > li > ul > li > ul{
   display: none;
 } 
+
+.sidebarcontent ul li a{
+  display: block;
+  line-height: 30px;
+}
+.sidebarcontent > ul ul { 
+  padding-left: 20px;
+}
 </style>
