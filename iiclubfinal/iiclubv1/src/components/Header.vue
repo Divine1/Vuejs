@@ -64,7 +64,7 @@ export default {
 /* first level start */
 .toolbar > ul {
     display: flex;
-    
+    flex-wrap: wrap;
     background-color: green;
 }
 .toolbar > ul > li{
@@ -150,7 +150,6 @@ export default {
 }
 
 .toolbar > ul > li ul li a:active{
-    /* display: none; */
     background-color: red;
 }
 </style>
