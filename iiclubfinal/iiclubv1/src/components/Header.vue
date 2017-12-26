@@ -40,8 +40,6 @@ export default {
 }
 .header{
   display: flex;
-  /* height: 10%; */
-  
 }
 
 .header .logo{
