@@ -9,8 +9,6 @@
 <script>
 import SlideContent from './SlideContent.vue';
 export default {
-
-    
     data(){
         return {
             counter : 0,
@@ -42,7 +40,7 @@ export default {
   created(){
     console.log("in created method");
      var self=this;
-         /* setInterval(()=>{
+        setInterval(()=>{
             if(!self.mouseoverImage){
                 if(self.counter == self.sliderImages.length-1)
                 {
@@ -52,7 +50,7 @@ export default {
                     self.counter++;
                 }
             }
-        },3000);  */
+        },3000);  
     } 
 }
 </script>

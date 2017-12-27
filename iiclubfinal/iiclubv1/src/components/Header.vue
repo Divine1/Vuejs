@@ -5,33 +5,17 @@
       </div>
       <div class="toolbar">
           <ul>
-              <li>
-                  <a>Courses</a>
+              <li v-for="(header,index) in headerData" :key="index">
+                  <a>{{header.topic}}</a>
                   <ul>
-                      <li>Course1
-                        <ul>
-                            <li>Coursex</li>
-                            <li>Coursey</li>
-                            <li>Coursez</li>
-                        </ul>
+                      <li v-for="(child1,index) in header.subTopic" :key="index">
+                          <a>{{child1.topic}}</a>
+                          <ul>
+                              <li v-for="(child2,index) in child1.subTopic" :key="index">
+                                <a>{{child2.topic}}</a>
+                             </li>
+                          </ul>
                       </li>
-                      <li>Course2
-                        <ul>
-                            <li>Lion</li>
-                            <li>Tiger</li>
-                            <li>Fool</li>
-                        </ul>
-
-                      </li>
-                      <li>Course3</li>
-                  </ul>
-              </li>
-              <li>
-                  <a>Competitions</a>
-                  <ul>
-                      <li>Select City</li>
-                      <li>Chennai</li>
-                      <li>Madurai</li>
                   </ul>
               </li>
           </ul>
@@ -40,8 +24,13 @@
 </template>
 
 <script>
+import {navbar} from './jsonInput/navbar';
 export default {
-  
+  data (){
+      return {
+          headerData: navbar
+        }
+  }
 }
 </script>
 
@@ -51,8 +40,6 @@ export default {
 }
 .header{
   display: flex;
-  /* height: 10%; */
-  
 }
 
 .header .logo{
@@ -75,7 +62,7 @@ export default {
 /* first level start */
 .toolbar > ul {
     display: flex;
-    
+    flex-wrap: wrap;
     background-color: green;
 }
 .toolbar > ul > li{
@@ -100,30 +87,32 @@ export default {
     background-color: blue;
 }
 
-.toolbar > ul > li > ul > li {
-    height: 30px;
-}
 .toolbar > ul > li > ul > li:hover {
     background-color: pink;
 }
 .toolbar > ul > li:hover > ul{
     display: block;
 }
+.toolbar > ul > li:nth-child(1) > ul{
+    width: 170px;
+}
+.toolbar > ul > li:nth-child(4) > ul{
+    width: 150px;
+}
 /* second level end*/
 
 /* third level start*/
+
 .toolbar > ul > li > ul > li > ul{
     display: none;
     position: absolute;
-    left: 110px;
-    width: 110px;
+    left: 170px;
+    width: 165px;
     background-color: orange;
-    margin-top: -18px;
+    margin-top: -38px;
 }
 
-.toolbar > ul > li > ul > li > ul > li{
-    height: 30px;
-}
+
 .toolbar > ul > li > ul > li > ul > li:hover{
     background-color: grey;
 }
@@ -131,9 +120,34 @@ export default {
 .toolbar > ul > li:hover > ul > li:hover > ul{
     display: block;
 }
+
+.toolbar > ul > li:nth-child(1) > ul > li:nth-child(2) > ul{
+    width: 85px;
+}
+.toolbar > ul > li:nth-child(1) > ul > li:nth-child(3) > ul{
+    width: 215px;
+}
+.toolbar > ul > li:nth-child(1) > ul > li:nth-child(4) > ul{
+    display: none;
+}
+.toolbar > ul > li:nth-child(1) > ul > li:nth-child(6) > ul{
+    width: 95px;
+}
+.toolbar > ul > li:nth-child(1) > ul > li:nth-child(7) > ul{
+    width: 80px;
+}
 /* third level end*/
 
 .toolbar > ul > li ul{
     z-index: 1;
+}
+
+.toolbar > ul > li ul li a{
+    display: block;
+    padding: 10px;
+}
+
+.toolbar > ul > li ul li a:active{
+    background-color: red;
 }
 </style>
