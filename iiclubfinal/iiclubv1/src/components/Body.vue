@@ -1,5 +1,7 @@
 <template>
+  <div id="mainbody">
     <router-view></router-view>
+  </div>
 </template>
 
 
@@ -13,3 +15,15 @@ export default {
   }
 }
 </script>
+
+<style>
+#mainbody{
+  background-color: violet;
+}
+#mainbody{
+  margin: 0 auto;
+  max-width: 1024px;
+  width: auto;
+  height: auto;
+}
+</style>

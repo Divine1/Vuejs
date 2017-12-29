@@ -6,13 +6,15 @@
       <div class="toolbar">
           <ul>
               <li v-for="(header,index) in headerData" :key="index">
-                  <a>{{header.topic}}</a>
+                  <a v-if="header.subTopic.length == 0" @click="chooseRoute(header.topicId)">{{header.topic}}</a>
+                  <a v-else>{{header.topic}}</a>
                   <ul>
                       <li v-for="(child1,index) in header.subTopic" :key="index">
-                          <a>{{child1.topic}}</a>
+                          <a v-if="child1.subTopic.length == 0" @click="chooseRoute(header.topicId,child1.topicId)">{{child1.topic}}</a>
+                          <a v-else>{{child1.topic}}</a>
                           <ul>
                               <li v-for="(child2,index) in child1.subTopic" :key="index">
-                                <a>{{child2.topic}}</a>
+                                <a @click="chooseRoute(header.topicId,child1.topicId,child2.topicId)">{{child2.topic}}</a>
                              </li>
                           </ul>
                       </li>
@@ -30,6 +32,20 @@ export default {
       return {
           headerData: navbar
         }
+  },
+  methods:{
+      chooseRoute(header_topicId,child1_topicId,child2_topicId){
+          console.log("in choose route");
+          console.log(header_topicId);
+          console.log(child1_topicId);
+          console.log(child2_topicId);
+          if(header_topicId == "courses"){
+              this.$router.push({path : '/other'});
+          }
+          else{
+              this.$router.push({path : ''});
+          }
+      }
   }
 }
 </script>

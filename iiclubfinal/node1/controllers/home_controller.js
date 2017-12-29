@@ -110,7 +110,7 @@ module.exports = {
          */
 
          
-        HomeModel.findOne({name : "modiii"})
+       /*  HomeModel.findOne({name : "modiii"})
         .then((home)=>{
              console.log("find success1");
              console.log(home);
@@ -125,7 +125,21 @@ module.exports = {
         .catch(()=> {
             console.log("find failed");
         });
-        res.send({"data" : "see console1 update"});
+        res.send({"data" : "see console1 update"}); */
         
+        HomeModel.find({})
+        .then((home)=>{
+             console.log("find success1");
+             console.log(home);
+             console.log(home.city);
+             home.forEach(function(obj,index){
+                console.log("index: "+index);
+                console.log("obj: "+obj.name);
+             });
+        })
+        .catch(()=> {
+            console.log("find failed");
+        });
+        res.send({"data" : "see console1 update"});
     }
 };
