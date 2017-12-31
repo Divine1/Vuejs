@@ -1,7 +1,7 @@
 <template>
   <div class="div-app">
     <header-t></header-t>
-    <!-- <div style="height:15%"></div> -->
+    <div style="height:10%"></div>
     <body-t></body-t>
     <footer-t></footer-t>
   </div>

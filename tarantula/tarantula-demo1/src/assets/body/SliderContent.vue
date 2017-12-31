@@ -22,25 +22,17 @@ export default {
  */
 #slidercontent{
   overflow: hidden;
+  display: inline-block;
 }
 #slidercontent .imagerender, #slidercontent .imagerender img{
   height: inherit;
     width: auto;
   display: inline-block;
+  
 }
 #slidercontent .imagerender img{
   width: 100%;
 }
-/* .fade-leave-active,
-.fade-enter-active {
-  transition: 1s;
-}
-.fade-enter-active {
-  transform: translate(100%, 0);
-}
-.fade-leave-active {
-  transform: translate(-100%, 0);
-} */
 
  .fade-enter-active{
     animation-name: fade-enter;

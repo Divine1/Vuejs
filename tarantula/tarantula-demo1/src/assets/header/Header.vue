@@ -97,7 +97,7 @@ export default {};
   background-color: black;
   color: white;
   display: flex;  
-  height:15%;
+  height:10%;
   /* align-items: center; */
   border-bottom: 2px green solid;
   position: fixed;
@@ -148,7 +148,8 @@ export default {};
 }
 
 .horizontal-bar  > ul > li ul{
-  opacity: 0.7;
+  /* opacity: 0.7; */
+  z-index: 10;
 }
 /* first level end */
 
