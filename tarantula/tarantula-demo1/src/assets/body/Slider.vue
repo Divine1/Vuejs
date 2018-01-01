@@ -39,9 +39,10 @@ export default {
 
 <style>
 #slider{
-    height: 100%;
-    width: auto;
+    height: 90%;
+    width: 100%;
     display: inline-block;
+    position: relative;
 }
 /* npm install vue-fontawesome */
 </style>

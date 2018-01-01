@@ -46,7 +46,7 @@
 
       <div class="pimg1" >
           <div class="ptext">
-              <div class="border" :style="img1style">
+              <div class="border pimg1_border" :style="img1style">
                   Image One text
               </div>
           </div>
@@ -85,11 +85,11 @@ export default {
     },
     scrolled(e){
       console.log("scrolled method started");
-      console.log("scrollTop: "+document.documentElement.scrollTop);
+  /*     console.log("scrollTop: "+document.documentElement.scrollTop);
       console.log("largewindow: "+(document.getElementById("details1_image").offsetTop - (window.innerHeight/1.5)));
       console.log("offsetTop: "+document.getElementById("details1_image").offsetTop);
       console.log("window.height: "+(window.innerHeight));
-      console.log("window.height divided: "+(window.innerHeight/1.5));
+      console.log("window.height divided: "+(window.innerHeight/1.5)); */
 
 
       if(document.documentElement.scrollTop > 
@@ -101,9 +101,9 @@ export default {
 
 // showdetails
 
-console.log("+++++++details1_1: "+document.getElementsByClassName("details1_1")[0].offsetTop);
+/* console.log("+++++++details1_1: "+document.getElementsByClassName("details1_1")[0].offsetTop);
 console.log("window.innerHeight/2: "+(window.innerHeight/2));
-console.log("++++++++window.innerHeight: "+(window.innerHeight));
+console.log("++++++++window.innerHeight: "+(window.innerHeight)); */
     if(document.documentElement.scrollTop > 
     (document.getElementsByClassName("details1_1")[0].offsetTop - (window.innerHeight/2))) {
         
@@ -140,9 +140,13 @@ if(document.documentElement.scrollTop >
 
     }
 
-    if(document.documentElement.scrollTop > 
-    document.getElementsByClassName("border")[0].offsetTop - (window.innerHeight/2)){
-        this.img1style = {color : "yellow"}
+console.log("scrollTop: "+document.documentElement.scrollTop);
+console.log("pimg1_border: "+(document.getElementsByClassName("pimg1_border")[0].offsetTop));
+console.log("++++++++ny4: "+(document.documentElement.scrollTop/4));
+
+    if(document.documentElement.scrollTop > document.getElementsByClassName("pimg1_border")[0].offsetTop){
+        //this.img1style = {color : "yellow"};
+       // this.img1style = {transform : "translate(0px,"+(document.documentElement.scrollTop/4)+"px )"};
     }
     
 
@@ -291,4 +295,5 @@ if(document.documentElement.scrollTop >
     opacity: 1;
     transform: translateX(0px);
 }
+
 </style>
