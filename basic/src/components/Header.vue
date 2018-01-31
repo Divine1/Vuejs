@@ -8,16 +8,14 @@
       </div>
   </div>
 </template>
-
 <script>
 export default {
-  data(){
-      return {
-          
-      }
+   created(){
+    console.log("Header component created");
   }
 }
 </script>
+
 <style>
 #header{
     background-color: yellow;

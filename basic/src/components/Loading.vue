@@ -1,16 +1,30 @@
 <template>
-  <div id="loading">
-      <div class="text">Loading</div> 
+  <div id="loading" :style="loading_style">
+      <div class="text">{{loading_text}} <button @click="close">Close</button></div> 
   </div>
 </template>
 
 <script>
 import {eventBus} from './../eventBus';
 export default {
-  beforeRouteEnter(to,from,next){
-      console.log("loading beforeRouterEnter");
-      eventBus.changeEvent("loading triggered");
-      next();
+    data(){
+        return{
+            loading_style : {display: 'none'},
+            loading_text : "loading..."
+        }
+    },
+    methods:{
+        close(){
+            this.loading_style= {display: 'none'};
+        }
+    },
+    created(){
+        console.log("Loading component created11");
+        eventBus.$on("changeloadingstyle",(data) => {
+            console.log("in changeloadingStyle emitted event");
+            this.loading_style=data.style;
+            this.loading_text=data.text;
+        });
     }
 }
 </script>
@@ -18,17 +32,15 @@ export default {
 #loading{
     background-color: magenta;
     position: absolute;
-    z-index: 1001;
+    z-index: 2;
     height: 100%;
     width: 100%;
-    opacity: .3;
+    opacity: .8;
 }
 #loading .text{
     background-color: yellowgreen;
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 1111;
-    opacity: 1.3;
 }
 </style>
