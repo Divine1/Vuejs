@@ -2,17 +2,12 @@
   <div id="body">
       Body
       <router-view></router-view>
-      
   </div>
 </template>
-
 <script>
-
 export default {
-  data(){
-      return {
-
-      }
+   created(){
+    console.log("Body component created");
   }
 }
 </script>

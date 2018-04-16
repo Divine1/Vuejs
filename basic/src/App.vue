@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Loading from './components/Loading.vue';
+/* import Loading from './components/Loading.vue'; */
 import Header from "./components/Header.vue";
 import Body from "./components/Body.vue";
     
@@ -15,12 +15,10 @@ export default {
   components : {
     "header-ii" : Header,
     "body-ii" : Body,
-    'loading-i' : Loading
+    /* 'loading-i' : Loading */
   },
-  data () {
-    return {
-      
-    }
+  created(){
+    console.log("App component created");
   }
 }
 </script>
@@ -31,9 +29,7 @@ html,body{
 html,body,#app,#mainapp{
     height: 100%;
     width:100%;
-    z-index: 100;
+    z-index: 1;
     position: relative;
 }
-
 </style>
-
